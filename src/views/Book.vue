@@ -1,19 +1,18 @@
 <template>
-    <main>
-        <h1>8 Classic Childrens Books</h1>
-        <div class="one-book">
+  <main>
 
-            
+    <div class="one-book">
 
-            <BookFront title="This is the title" 
-            author="This is the author"
+      <BookFront title="This is the title" 
+        author="This is the author"
 
-            />
-            <BookSummary title="Summary title"
+      />
+      <BookSummary title="Summary title"
 
-            />
+      />
 
     </div>
+    
   </main>
 </template>
 

@@ -18,7 +18,8 @@
       <BookFront v-for="book in allBooks"
         v-bind:key="book.id"
         v-bind:title="book.title"
-        v-bind:author="book.author"    
+        v-bind:author="book.author"
+        v-bind:bgColor="book.color"    
 
       />
 

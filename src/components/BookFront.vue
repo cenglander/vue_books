@@ -1,5 +1,6 @@
 <template>
-  <div class="book-front"> 
+  <div class="book-front"
+    v-bind:style="style"> 
     <h3>{{ title }}</h3>
     <h5>{{ author }}</h5>
     
@@ -13,7 +14,13 @@ export default {
   props: {
     title: String,
     author: String,
+    bgColor: String,
     
+  },
+  computed: {
+    style() {
+      return 'background-color: ' + this.bgColor;
+    }
   },
   
   methods: {
@@ -24,19 +31,20 @@ export default {
 
 <style scoped lang="scss">
 
-div .book-front {
-    width: 200px;
-    height: 300px;
-    background: lightskyblue;
+  div .book-front {
+      width: 200px;
+      height: 300px;
+      //background: lightskyblue;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 1vw;
-    margin: 1vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1vw;
+      margin: 1vw;
+      
 
-    h1 {
-        font-size: 2rem;
-    }
-}
+      h1 {
+          font-size: 2rem;
+      }
+  }
 </style>
