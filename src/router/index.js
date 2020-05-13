@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import AllBooks from '../views/AllBooks.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'AllBooks',
+    component: AllBooks
   },
   {
     path: '/about',
@@ -18,6 +18,9 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
+  // {
+  //   dynamic routing with bookId v-on:click
+  // }
 ]
 
 const router = new VueRouter({
