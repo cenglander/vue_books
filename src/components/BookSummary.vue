@@ -1,6 +1,6 @@
 <template>
   <div class="book-summary">
-    <h1>{{ test }}</h1>
+    <h1>{{ title }}</h1>
 
   </div>
 </template>
@@ -9,7 +9,7 @@
 export default {
   name: 'BookSummary',
   props: {
-    test: String
+    title: String
   }
 }
 </script>

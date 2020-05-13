@@ -13,6 +13,15 @@ new Vue({
   }
 },
 
+methods: {
+  getBook(bookId) {
+    return this.booksJson.books.find(book => book.id == bookId)
+  },
+  // getAllBooks() {
+  //   return this.booksJson.books
+  // }
+},
+
 // methods: {
 //   getTitle(id) {
 //     return this.books.find(title => title.id == id)

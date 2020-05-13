@@ -1,7 +1,8 @@
 <template>
-  <div class="book-front">
+  <div class="book-front"> 
     <h3>{{ title }}</h3>
     <h5>{{ author }}</h5>
+    
 
   </div>
 </template>
@@ -12,10 +13,12 @@ export default {
   props: {
     title: String,
     author: String,
+    
   },
-//   methods: {
-//       console.log (this.$root."books" )
-//   }
+  
+  methods: {
+    //   console.log (this.$root.booksJson )
+  }
 }
 </script>
 
@@ -24,7 +27,7 @@ export default {
 div .book-front {
     width: 200px;
     height: 300px;
-    background: darkkhaki;
+    background: lightskyblue;
 
     display: flex;
     flex-direction: column;

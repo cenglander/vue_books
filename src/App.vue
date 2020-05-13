@@ -1,23 +1,28 @@
 <template>
   <div id="app">
+
     <div id="nav">
-      <!-- <router-link to="/">All Books</router-link>|
-      <router-link to="/about">One Book</router-link> -->
-      <!-- <router-link to="/about">About</router-link> -->
+      <router-link to="/">All Books</router-link>|
+      <router-link to="/one_book">One Book</router-link>
+
     </div>
+
     <router-view />
+
   </div>
 </template>
 
+
 <script>
 export default {
-  computed: {  
-    books() {
-      return this.$root.books
-    }
-  }
+  // computed: {  
+  //   books() {
+  //     return this.$root.booksJson.books
+  //   }
+  // }
 }
 </script>
+
 
 <style lang="scss">
 #app {
