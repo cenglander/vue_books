@@ -32,6 +32,8 @@ div .book-front {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding: 1vw;
+    margin: 1vw;
 
     h1 {
         font-size: 2rem;

@@ -17,9 +17,9 @@ methods: {
   getBook(bookId) {
     return this.booksJson.books.find(book => book.id == bookId)
   },
-  // getAllBooks() {
-  //   return this.booksJson.books
-  // }
+  getAllBooks() {
+    return this.booksJson.books
+  }
 },
 
 // methods: {

@@ -1,15 +1,26 @@
 <template>
-    <main>
-        <h1>8 Classic Childrens Books</h1>
-        <div class="all-books">
+  <main>
+    <h1>8 Classic Childrens Books</h1>
+    <div class="all-books">
 
             
-            <p> {{ book }}</p>
-            <BookFront title="This is the title" 
-            author="This is the author"
-            
+      <!-- <p> {{ book }}</p> -->
+      <!-- <p> {{ allBooks }} </p> -->
+      <!-- <p v-for="book in allBooks"
+        v-bind:key="book.id"> {{ book }} </p> -->
 
-            />
+      <!-- <p v-for="book in allBooks"
+        v-bind:key="book.id"
+        v-bind:title="book.title"
+        v-bind:author="book.author"> {{ book }} </p> -->
+
+
+      <BookFront v-for="book in allBooks"
+        v-bind:key="book.id"
+        v-bind:title="book.title"
+        v-bind:author="book.author"    
+
+      />
 
     </div>
   </main>
@@ -33,11 +44,9 @@ export default {
       book() {
           return this.$root.getBook(1)
       },
-    //   allBooks() {
-    //       for (let i = 1; i < this.$root.getAllBooks(); i++) {
-    //           return this.$root.getAllBooks()
-    //       }
-    //   }
+      allBooks() {
+        return this.$root.getAllBooks()
+      }
   }
 
 } 
