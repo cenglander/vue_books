@@ -1,9 +1,9 @@
 <template>
   <div class="book-front"
-    v-bind:style="style"> 
+    v-bind:style="style"
+    @click="showThisBook()">  
     <h3>{{ title }}</h3>
     <h5>{{ author }}</h5>
-    
 
   </div>
 </template>
@@ -12,6 +12,7 @@
 export default {
   name: 'BookFront',
   props: {
+    bookId: Number,
     title: String,
     author: String,
     bgColor: String,
@@ -19,32 +20,21 @@ export default {
   },
   computed: {
     style() {
-      return 'background-color: ' + this.bgColor;
+      //return 'background-color: ' + this.bgColor;
+      return 'background-image: linear-gradient(to top right, ' + this.bgColor + ' , white);'
     }
   },
   
   methods: {
-    //   console.log (this.$root.booksJson )
+    showThisBook() {
+      console.log(this.bookId)
+    }
+
   }
 }
 </script>
 
 <style scoped lang="scss">
 
-  div .book-front {
-      width: 200px;
-      height: 300px;
-      //background: lightskyblue;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 1vw;
-      margin: 1vw;
-      
-
-      h1 {
-          font-size: 2rem;
-      }
-  }
 </style>

@@ -3,11 +3,14 @@
 
     <div class="one-book">
 
-      <BookFront title="This is the title" 
-        author="This is the author"
-
-      />
-      <BookSummary title="Summary title"
+      <BookFront
+          v-bind:bookId="book.id"
+          v-bind:title="book.title"
+          v-bind:author="book.author"
+          v-bind:bgColor="book.color"
+        />
+      <BookSummary 
+          v-bind:title="book.title"
 
       />
 
@@ -17,8 +20,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-//import HelloWorld from '@/components/HelloWorld.vue'
 import BookFront from '@/components/BookFront.vue'
 import BookSummary from '@/components/BookSummary.vue'
 
@@ -28,8 +29,15 @@ export default {
       BookFront,
       BookSummary,
   },
+  computed: {
+    book() {
+      return this.$root.getBook(this.$route.params.id);
+    },
+    allBooks() {
+      return this.$root.getAllBooks();
+    }
+  },
   methods: {
-    //   console.log (this.$root.booksJson )
   }
 } 
 </script>
@@ -45,17 +53,26 @@ main {
 
 }
 div .one-book {
-
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-end;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-
     padding: 2vh;
 
-    
 }
+ div .book-front {
+      width: 400px;
+      height: 600px;
+      background: lightskyblue;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1vw;
+      margin: 1vw;
+      
+
+      h3 {
+          font-size: 3rem;
+      }
+  }
 </style>

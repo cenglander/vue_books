@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import AllBooks from '../views/AllBooks.vue'
+import Book from '../views/Book.vue'
 
 Vue.use(VueRouter)
 
@@ -11,17 +12,11 @@ Vue.use(VueRouter)
     component: AllBooks
   },
   {
-    path: '/one_book',
+    path: '/books/:id',
     name: 'One Book',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Book.vue')
+    component: Book
   }
 
-  // {
-  //   dynamic routing with bookId v-on:click
-  // }
 ]
 
 const router = new VueRouter({

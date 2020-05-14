@@ -22,12 +22,6 @@ methods: {
   }
 },
 
-// methods: {
-//   getTitle(id) {
-//     return this.books.find(title => title.id == id)
-//   }
-// },
-
   router,
   render: h => h(App)
 }).$mount('#app')
