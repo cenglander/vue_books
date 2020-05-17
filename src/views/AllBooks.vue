@@ -44,8 +44,10 @@ export default {
 </script>
 
 <style lang="scss">
-main {
-  background: lightcyan;
+
+h1 {
+  padding-left: 3vh;
+  margin-bottom: 0;
 }
 div .all-books {
   display: grid;
@@ -65,8 +67,12 @@ div .all-books {
       padding: 1vw;
       margin: 1vw;
 
-      h3 {
-          font-size: 1.2rem;
+      h3, h5 {
+        padding: 1vh;
+        margin: 0;
+        color: #fff;
+        text-decoration: none;
       }
+
   }
 </style>

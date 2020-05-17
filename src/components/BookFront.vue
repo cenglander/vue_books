@@ -1,7 +1,6 @@
 <template>
   <div class="book-front"
-    v-bind:style="style"
-    @click="showThisBook()">  
+    v-bind:style="style">  
     <h3>{{ title }}</h3>
     <h5>{{ author }}</h5>
 
@@ -26,9 +25,7 @@ export default {
   },
   
   methods: {
-    showThisBook() {
-      console.log(this.bookId)
-    }
+    
 
   }
 }
